@@ -21,3 +21,8 @@ EXPOSE 8888
 docker build -t cra .
 # takes around 3-5 minutes
 ```
+
+
+links:
+- https://hub.docker.com/_/node
+- https://github.com/lopezator/hello-docker-react

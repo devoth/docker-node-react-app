@@ -26,3 +26,4 @@ docker build -t cra .
 links:
 - https://hub.docker.com/_/node
 - https://github.com/lopezator/hello-docker-react
+- https://www.barrydobson.com/post/react-docker/

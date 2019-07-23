@@ -1,14 +1,15 @@
-version: "3"
+version: '3.5'
 
 services:
-  hello-docker-react:
+  dev:
+    container_name: react-app-dev
     build:
-      context: ./docker
-      dockerfile: node.Dockerfile
-    container_name: cras
-    # entrypoint: sh entrypoint.sh
-    working_dir: /home/node
-    ports:
-      - 3000:3000
+      context: .
+      dockerfile: docker/local.Dockerfile
     volumes:
-      - .:/home/node
+      - './:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
